@@ -11,6 +11,8 @@
 		C4AB77582960E6FA00BE9346 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB77572960E6FA00BE9346 /* ContentView.swift */; };
 		C4AB775A2960E6FC00BE9346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AB77592960E6FC00BE9346 /* Assets.xcassets */; };
 		C4AB775D2960E6FC00BE9346 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AB775C2960E6FC00BE9346 /* Preview Assets.xcassets */; };
+		C4AB77652960E71100BE9346 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB77642960E71100BE9346 /* WebView.swift */; };
+		C4AB77682960EC1400BE9346 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AB77672960EC1400BE9346 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		C4AB77572960E6FA00BE9346 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4AB77592960E6FC00BE9346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4AB775C2960E6FC00BE9346 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C4AB77642960E71100BE9346 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C4AB77672960EC1400BE9346 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C4AB77692960F11A00BE9346 /* OpenAIWeb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenAIWeb.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,9 @@
 		C4AB77542960E6FA00BE9346 /* OpenAIWeb */ = {
 			isa = PBXGroup;
 			children = (
+				C4AB77692960F11A00BE9346 /* OpenAIWeb.entitlements */,
+				C4AB77662960EC0300BE9346 /* ViewModel */,
+				C4AB77632960E70600BE9346 /* View */,
 				C4AB77552960E6FA00BE9346 /* OpenAIWebApp.swift */,
 				C4AB77572960E6FA00BE9346 /* ContentView.swift */,
 				C4AB77592960E6FC00BE9346 /* Assets.xcassets */,
@@ -65,6 +73,22 @@
 				C4AB775C2960E6FC00BE9346 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4AB77632960E70600BE9346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4AB77642960E71100BE9346 /* WebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4AB77662960EC0300BE9346 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C4AB77672960EC1400BE9346 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4AB77582960E6FA00BE9346 /* ContentView.swift in Sources */,
+				C4AB77652960E71100BE9346 /* WebView.swift in Sources */,
+				C4AB77682960EC1400BE9346 /* ViewModel.swift in Sources */,
 				C4AB77562960E6FA00BE9346 /* OpenAIWebApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenAIWeb/OpenAIWeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenAIWeb/Preview Content\"";
@@ -275,6 +302,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = OpenAIWeb/OpenAIWeb.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenAIWeb/Preview Content\"";
@@ -304,6 +333,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

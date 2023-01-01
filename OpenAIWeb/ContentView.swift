@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ViewModel()
+    let urlString : String = "https://chat.openai.com/chat"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            if let url = URL(string: urlString){
+                WebView(viewModel: viewModel, request: URLRequest(url: url))
+            }else{
+                Text("Url non available")
+                    .foregroundColor(.gray)
+                    
+            }
+            Image(systemName: "arrow.clockwise")
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 30,height: 30)
+                .onTapGesture {
+                    viewModel.refresh.toggle()
+                }
         }
-        .padding()
+        
     }
 }
 
